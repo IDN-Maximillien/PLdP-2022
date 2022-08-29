@@ -24,15 +24,19 @@ def binSearch(angka, daftar):
         print(f'Angka {angka} tidak ditemukan! Pencarian dilakukan sebanyak {langkah} langkah.')
 
 def searchAlt(angka, listAngka):
+    stat = False
     for i in range(len(listAngka)):
         if listAngka[i] == angka:
             stat = True
+            break
         else:
             continue
-    print(f'{angka} ditemukan pada indeks ke {i+1}')
-
+    if stat == True:
+        print(f'{angka} ditemukan pada indeks ke {i+1}')
+    else: 
+        print(f'{angka} tidak ditemukan!')
 listAngka = [67,13,71,39,45]
 cariangka = int(input('Angka : '))    
-stat = False
 
 binSearch(cariangka, listAngka)
+searchAlt(cariangka, listAngka)
