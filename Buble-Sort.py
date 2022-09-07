@@ -23,6 +23,15 @@ def bubleSort_for(liste):
                 print(f'=== Proses ke-{j} : {liste} ===')
             j += 1
         
+
+def bubleSort_while(liste):
+    status = True
+    longueur = len(liste)
+    k = 1
+    while longueur > 1 and status:
+        status = False
+        j = 1
+        
         while j < longueur:
             # print('line - a')
             if liste[j] < liste[j-1]:
@@ -36,15 +45,7 @@ def bubleSort_for(liste):
                 print(f'=== Proses ke-{j} : {liste} ===')
                 # print()
             j += 1
-
-def bubleSort_while(liste):
-    status = True
-    longueur = len(liste)
-    k = 1
-    while longueur > 1 and status:
-        status = False
-        j = 1
-        
+            
         print(f'iterasi ke-{k} : {liste}')
         k += 1
         if not status:
